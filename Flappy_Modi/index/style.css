@@ -1,0 +1,52 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  background: radial-gradient(circle at top, #0f2027, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+
+  /* MOBILE TOUCH SAFETY */
+  touch-action: none;
+  user-select: none;
+}
+
+/* ===== CANVAS ===== */
+canvas {
+  border-radius: 16px;
+
+  /* NEON BORDER */
+  box-shadow:
+    0 0 10px #00f7ff,
+    0 0 20px #00f7ff,
+    0 0 40px #00f7ff,
+    inset 0 0 10px rgba(0, 247, 255, 0.4);
+
+  background: #000;
+  animation: neonPulse 2s infinite alternate;
+}
+
+/* ===== NEON PULSE ===== */
+@keyframes neonPulse {
+  from {
+    box-shadow:
+      0 0 10px #00f7ff,
+      0 0 20px #00f7ff,
+      0 0 40px #00f7ff;
+  }
+  to {
+    box-shadow:
+      0 0 20px #00ffe1,
+      0 0 40px #00ffe1,
+      0 0 80px #00ffe1;
+  }
+}
